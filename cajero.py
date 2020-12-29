@@ -2,7 +2,7 @@ from random import randint
 import cuentaCliente
 class Cajero():
     stado=False
-    saldoPesos=cuentaCliente.cuentaCliente.saldoPesos
+    idCajero=1234567
     
     def setEstado(self):
         self.stado=True    
@@ -12,19 +12,16 @@ class Cajero():
         else:
             return "El cajero no esta activo"         
     def generoNuevaClaveHomeBanking(self):
-        numeros_aleatorios = [randint(1,20) for i in range(20)]
+        numeros_aleatorios = [randint(1,9) for i in range(20)]
         return numeros_aleatorios
-
-
 elCajero=Cajero()
 elCajero.setEstado()
-saldoCuenta=cuentaCliente.cuentaCliente()
-print(elCajero.getEstado())
-
-
-opcion=3
+saldoCuenta=cuentaCliente.CuentaCliente()
+#indico el estado del cajero
+#print(elCajero.getEstado())
+opcion=4
 if(opcion==1):
-    print("Su saldo es: ",elCajero.saldoPesos)
+    print("Su saldo es: ",cuentaCliente.CuentaCliente.saldoPesos)
 if(opcion==2):
     retiro=100
     #retiro=10000000
