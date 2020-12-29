@@ -10,16 +10,7 @@ class Cajero():
         if(self.stado):
             return "El cajero esta activo"
         else:
-            return "El cajero no esta activo"
-    def sacoSaldoCuenta(self,retiro):
-        if(retiro<elCajero.saldoPesos):
-            elCajero.saldoPesos=elCajero.saldoPesos-retiro
-            return print("Su saldo es: $",elCajero.saldoPesos, " Usted reitor: $",retiro)
-        else:
-            return print("No tiene saldo suficiente")      
-    def pongoSaldoCuenta(self,deposito):
-       elCajero.saldoPesos=elCajero.saldoPesos+deposito
-    
+            return "El cajero no esta activo"         
     def generoNuevaClaveHomeBanking(self):
         numeros_aleatorios = [randint(1,20) for i in range(20)]
         return numeros_aleatorios
@@ -27,19 +18,19 @@ class Cajero():
 
 elCajero=Cajero()
 elCajero.setEstado()
+saldoCuenta=cuentaCliente.cuentaCliente()
 print(elCajero.getEstado())
 
-opcion=2
 
+opcion=3
 if(opcion==1):
     print("Su saldo es: ",elCajero.saldoPesos)
 if(opcion==2):
     retiro=100
     #retiro=10000000
-    elCajero.sacoSaldoCuenta(retiro) 
+    saldoCuenta.sacoSaldoCuenta(retiro)
 if(opcion==3):
     depositoPlata=1000
-    elCajero.pongoSaldoCuenta(depositoPlata)
-    print(elCajero.saldoPesos)
+    saldoCuenta.pongoSaldoCuenta(depositoPlata)
 if(opcion==4):
     print("Su clave es: ",elCajero.generoNuevaClaveHomeBanking())
