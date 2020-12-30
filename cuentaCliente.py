@@ -1,7 +1,9 @@
+from random import randint
 class CuentaCliente():
     saldoPesos=100000
     saldoDolaes=2000
     Nombre="Ricardo"
+    idCliente=123456
 
     def sacoSaldoCuenta(self,retiro):
         if(retiro<CuentaCliente.saldoPesos):
@@ -33,4 +35,9 @@ class CuentaCliente():
         if(cantidadDolares<CuentaCliente.saldoDolaes):
             return print("Su saldo en pesos es: $",CuentaCliente.saldoPesos)
         else:
-            return print("No tiene saldo suficiente para vender dolares")  
+            return print("No tiene saldo suficiente para vender dolares")
+    #Genero clave Homebanking        
+    def generoNuevaClaveHomeBanking(self):
+        numeros_aleatorios = [randint(1,9) for i in range(20)]
+        return numeros_aleatorios
+               

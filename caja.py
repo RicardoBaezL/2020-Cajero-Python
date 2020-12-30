@@ -4,7 +4,7 @@ class Caja():
     cajaRegistrador=True
     idUbicacion=1111
 saldoCuenta=cuentaCliente.CuentaCliente()
-#Indica cliente si quiere reirar pesos o dolares
+#opcion indica que quiere hacer el cliente
 opcion="vendoDolares"
 #monto=8000
 monto=100
