@@ -39,5 +39,4 @@ class CuentaCliente():
     #Genero clave Homebanking        
     def generoNuevaClaveHomeBanking(self):
         numeros_aleatorios = [randint(1,9) for i in range(20)]
-        return numeros_aleatorios
-               
+        return numeros_aleatorios              
