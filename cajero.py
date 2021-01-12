@@ -3,6 +3,7 @@ class Cajero():
     def __init__(self):
         self.stado=True
         self.idCajero=1234567
+        self.Cuenta=cuentaCliente.CuentaCliente()
     
     def getEstado(self):
         if(self.stado):
@@ -12,18 +13,18 @@ class Cajero():
        
 elCajero=Cajero()
 
-Cuenta=cuentaCliente.CuentaCliente()
+
 #indico el estado del cajero
 #print(elCajero.getEstado())
 opcion=4
 if(opcion==1):
-    print(Cuenta.muestroSaldoCuentaPesos())
+    elCajero.Cuenta.muestroSaldoCuentaPesos()
 if(opcion==2):
     retiro=100
     #retiro=10000000
-    Cuenta.sacoSaldoCuenta(retiro)
+    elCajero.Cuenta.sacoSaldoCuenta(retiro)
 if(opcion==3):
     depositoPlata=1000
-    Cuenta.pongoSaldoCuenta(depositoPlata)
+    elCajero.Cuenta.pongoSaldoCuenta(depositoPlata)
 if(opcion==4):
-    print("Su clave es: ",Cuenta.generoNuevaClaveHomeBanking())
+    print("Su clave es: ",elCajero.Cuenta.generoNuevaClaveHomeBanking())
