@@ -1,11 +1,15 @@
 from random import randint
 class CuentaCliente():
+    idCliente=0
+    saldoPesos=0
+    saldoDolaes=0
+    Nombre=""
+
     def __init__(self):
             self.saldoPesos=100000
             self.saldoDolaes=2000
             self.Nombre="Ricardo"
             self.idCliente=123456
-
 
     def muestroSaldoCuentaPesos(self):
         return print("Su saldo es: ",self.saldoPesos)

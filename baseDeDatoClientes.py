@@ -1,6 +1,5 @@
 import sqlite3
 
-
 baseClientes=sqlite3.connect("datosClientes")
 puntero=baseClientes.cursor()
 #puntero.execute('''CREATE TABLE BDCLIENTES (
@@ -19,7 +18,7 @@ listadoClientes=[
 #puntero.executemany("INSERT INTO BDCLIENTES VALUES (NULL,?,?,?)",listadoClientes)
 puntero.execute("SELECT * FROM BDCLIENTES")
 verListaCliente=puntero.fetchall()
-#for cliente in verListaCliente:
-    #print("numero de id: ",cliente[0]," nombre cliente: ",cliente[1]," saldo en pesos es: ",cliente[2]," Saldo en dolares es: ",cliente[3],)
+for cliente in verListaCliente:
+    print("numero de id: ",cliente[0]," nombre cliente: ",cliente[1]," saldo en pesos es: ",cliente[2]," Saldo en dolares es: ",cliente[3],)
 baseClientes.commit()
 baseClientes.close()

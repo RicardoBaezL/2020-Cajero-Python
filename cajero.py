@@ -1,5 +1,9 @@
 import cuentaCliente
 class Cajero():
+    stado=''
+    idCajero=0
+    Cuenta=0
+
     def __init__(self):
         self.stado=True
         self.idCajero=1234567
@@ -12,11 +16,9 @@ class Cajero():
             return "El cajero no esta activo"         
        
 elCajero=Cajero()
-
-
 #indico el estado del cajero
 #print(elCajero.getEstado())
-opcion=4
+opcion=3
 if(opcion==1):
     elCajero.Cuenta.muestroSaldoCuentaPesos()
 if(opcion==2):
