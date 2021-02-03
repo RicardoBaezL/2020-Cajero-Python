@@ -10,8 +10,6 @@ class Caja():
         self.escritorio=True
         self.cajaRegistrador=True
         self.saldoCuenta=cuentaCliente.CuentaCliente()
-
-
         
 laCaja=Caja()
 #opcion indica que quiere hacer el cliente
